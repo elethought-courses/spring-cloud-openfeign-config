@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: spring-cloud-openfeign-config
+  cloud:
+    openfeign:
+      client:
+        config:
+          default:
+            connect-timeout: 5000
+            read-timeout: 10000
+            logger-level: basic
+            dismiss404: false
+            follow-redirects: true
+          pokeapi:
+            url: https://pokeapi.co
+            connect-timeout: 3000
+            read-timeout: 5000
+            logger-level: full
+            default-request-headers:
+              Accept: application/json
+              User-Agent: spring-cloud-openfeign-demo
+
+      httpclient:
+        max-connections: 200
+        max-connections-per-route: 50
+        time-to-live: 900
+        time-to-live-unit: seconds
+        connection-timeout: 2000
+        follow-redirects: true
+        hc5:
+          enabled: true
+          socket-timeout: 5
+          socket-timeout-unit: seconds
+          connection-request-timeout: 3
+          connection-request-timeout-unit: minutes
+          pool-concurrency-policy: strict
+          pool-reuse-policy: fifo
+
+
+logging:
+  level:
+    tech.elethoughts.courses.cloud.feign.infrastructure: DEBUG
