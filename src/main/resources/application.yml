@@ -11,11 +11,22 @@ spring:
             logger-level: basic
             dismiss404: false
             follow-redirects: true
-          pokeapi:
+          pokemon-hc5:
             url: https://pokeapi.co
-            connect-timeout: 3000
-            read-timeout: 5000
-            logger-level: full
+            connect-timeout: 5000
+            read-timeout: 10000
+          pokemon-http2:
+            url: https://pokeapi.co
+            connect-timeout: 5000
+            read-timeout: 10000
+          pokemon-default:
+            url: https://pokeapi.co
+            connect-timeout: 5000
+            read-timeout: 10000
+          pokemon-custom-config:
+            url: https://pokeapi.co
+            connect-timeout: 5000
+            read-timeout: 10000
             default-request-headers:
               Accept: application/json
               User-Agent: spring-cloud-openfeign-demo

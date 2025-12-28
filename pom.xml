@@ -40,6 +40,14 @@
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-java11</artifactId>
         </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-jackson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-slf4j</artifactId>
+        </dependency>
         <!-- Fix CVE-2025-48976: Override vulnerable commons-fileupload 1.5 -->
         <dependency>
             <groupId>commons-fileupload</groupId>
