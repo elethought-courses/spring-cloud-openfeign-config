@@ -8,7 +8,7 @@ import tech.elethoughts.courses.cloud.feign.domain.Page;
 import tech.elethoughts.courses.cloud.feign.domain.Pokemon;
 import tech.elethoughts.courses.cloud.feign.domain.PokemonSummary;
 
-@FeignClient(name = "pokeapi")
+@FeignClient(name = "pokeapi", configuration = FeignClientConfig.class)
 public interface PokemonClient {
 
     @GetMapping("/api/v1/pokemon/{nameOrId}")
