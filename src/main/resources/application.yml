@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: spring-cloud-openfeign-config
@@ -15,14 +16,41 @@ spring:
             url: https://pokeapi.co
             connect-timeout: 5000
             read-timeout: 10000
+            proxy:
+              enabled: true
+              host: localhost
+              port: 8888
+            tls:
+              enabled: true
+              trust-store: file:./certs/mitmproxy-truststore.p12
+              trust-store-password: changeit
+              verify-hostname: false
           pokemon-http2:
             url: https://pokeapi.co
             connect-timeout: 5000
             read-timeout: 10000
+            proxy:
+              enabled: true
+              host: localhost
+              port: 8888
+            tls:
+              enabled: true
+              trust-store: file:./certs/mitmproxy-truststore.p12
+              trust-store-password: changeit
+              verify-hostname: false
           pokemon-default:
             url: https://pokeapi.co
             connect-timeout: 5000
             read-timeout: 10000
+            proxy:
+              enabled: true
+              host: localhost
+              port: 8888
+            tls:
+              enabled: true
+              trust-store: file:./certs/mitmproxy-truststore.p12
+              trust-store-password: changeit
+              verify-hostname: false
           pokemon-custom-config:
             url: https://pokeapi.co
             connect-timeout: 5000
@@ -51,3 +79,5 @@ spring:
 logging:
   level:
     tech.elethoughts.courses.cloud.feign.infrastructure: DEBUG
+server:
+  port: 8090
