@@ -1,5 +1,7 @@
 # Spring Cloud OpenFeign Configuration Demo
 
+This repository is the companion code for the article: **[Spring Cloud OpenFeign Configuration](https://abissens.elethoughts.tech/blog/articles_spring_cloud_openfeign_config/)**
+
 This project demonstrates advanced Spring Cloud OpenFeign configuration including:
 - Multiple HTTP client implementations (Apache HttpClient 5, Java HTTP/2, Default)
 - Per-client proxy configuration
@@ -172,3 +174,7 @@ mvn test
 ```
 
 Tests use WireMock to mock the PokeAPI and test proxy/TLS configurations independently.
+
+## License
+
+[MIT](LICENSE)
